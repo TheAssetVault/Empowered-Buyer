@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Empowered Buyer | Your Step-by-Step Home Journey</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts (Inter & Playfair Display for elegant headings) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f4f7f6',
+                            100: '#e5ebe9',
+                            200: '#ccdcd6',
+                            300: '#a3c0b5',
+                            400: '#759e90',
+                            500: '#568173',
+                            600: '#43675a',
+                            700: '#38544b',
+                            800: '#2f453f',
+                            900: '#14221e', // Slate-forest deep green
+                        },
+                        accent: {
+                            light: '#dfb76c',
+                            DEFAULT: '#c5a059', // Warm elegant gold
+                            dark: '#aa843f',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom smooth focus and elegant shadows */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #c5a059 0%, #f3e5ab 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-brand-50 text-slate-800 font-sans antialiased selection:bg-accent selection:text-white">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="sticky top-0 z-40 w-full transition-all duration-300 bg-brand-900/95 backdrop-blur-md border-b border-brand-800 text-white py-4 px-6 shadow-lg">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3 group">
+                <span class="p-2 bg-accent/20 rounded-lg text-accent border border-accent/30 group-hover:bg-accent group-hover:text-brand-900 transition-all duration-300">
+                    <i class="fa-solid fa-house-chimney text-lg"></i>
+                </span>
+                <div>
+                    <span class="font-serif text-lg md:text-xl font-bold tracking-wide block leading-none">THE EMPOWERED BUYER</span>
+                    <span class="text-[10px] text-accent font-semibold tracking-widest uppercase">Education & Foundation</span>
+                </div>
+            </a>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#blueprint" class="hover:text-accent transition-colors duration-200">The Blueprint</a>
+                <a href="#anatomy" class="hover:text-accent transition-colors duration-200">The Transaction Math</a>
+                <a href="#journey" class="hover:text-accent transition-colors duration-200">The 5-Step Journey</a>
+                <a href="#protection" class="hover:text-accent transition-colors duration-200">Mortgage Protection</a>
+            </div>
+
+            <div>
+                <button onclick="openModal('advisor')" class="bg-accent hover:bg-accent-dark text-brand-900 font-semibold px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 text-sm">
+                    Book Consultation
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO INTRO SECTION -->
+    <header class="relative overflow-hidden bg-brand-900 text-white pt-20 pb-28 md:py-32 px-6">
+        <!-- Abstract Background Shapes -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-brand-400 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="relative max-w-6xl mx-auto text-center">
+            <span class="inline-block px-4 py-1.5 bg-accent/10 border border-accent/20 rounded-full text-accent font-semibold text-xs tracking-widest uppercase mb-6 animate-pulse">
+                Welcome Future Homeowner
+            </span>
+            <h1 class="font-serif text-4xl md:text-6xl font-bold tracking-tight mb-8 leading-tight">
+                Empowering Your First Step <br class="hidden md:block"> Towards <span class="text-accent italic">Homeownership</span>
+            </h1>
+            
+            <!-- Side-by-Side Image and Bio Card -->
+            <div class="glass-card text-slate-800 p-6 md:p-8 rounded-3xl shadow-2xl border border-white/20 mb-10 text-left relative overflow-hidden">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                    
+                    <!-- Left Column: Headshot Photo with Name Underneath -->
+                    <div class="md:col-span-4 flex flex-col items-center justify-center gap-3">
+                        <div class="relative group w-full max-w-[260px] md:max-w-none">
+                            <div class="absolute -inset-1 bg-gradient-to-r from-accent to-brand-500 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+                            <img src="Top HeadPhoto.jpg" 
+                                 alt="Soraya Mendoza Headshot" 
+                                 class="relative w-full aspect-[4/5] object-cover object-top rounded-2xl shadow-xl border-2 border-accent/30"
+                                 onerror="this.src='https://placehold.co/400x500/14221e/dfb76c?text=Soraya+Mendoza'">
+                        </div>
+                        <!-- Name directly underneath the image -->
+                        <div class="text-center mt-1">
+                            <h4 class="font-serif text-lg md:text-xl font-bold tracking-widest text-brand-900 uppercase">
+                                SORAYA MENDOZA
+                            </h4>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column: Dual-License Greeting -->
+                    <div class="md:col-span-8 flex flex-col justify-center space-y-4">
+                        <span class="text-accent font-bold tracking-wider uppercase text-xs">A Trusted Partnership</span>
+                        <h3 class="font-serif text-2xl md:text-3xl font-bold text-brand-900 leading-tight">
+                            Hi, I'm Your Licensed Real Estate Agent & Partner in Homeownership
+                        </h3>
+                        <p class="text-slate-700 font-medium leading-relaxed text-sm md:text-base">
+                            Thank you so much for visiting my page! Buying your first home is incredibly exciting, but I completely understand that it is also one of the biggest emotional and financial steps you will ever take in your life. <br><br>My core mission is simple: to educate you thoroughly so you possess an unbreakable foundation of knowledge. When you shop with confidence, certainty, and a master strategy, you win.
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#blueprint" class="w-full sm:w-auto px-10 py-4 bg-accent hover:bg-accent-dark text-brand-900 font-bold rounded-xl shadow-lg transition-all duration-300 text-center text-base transform hover:-translate-y-0.5">
+                    Start Learning Below <i class="fa-solid fa-arrow-down ml-2"></i>
+                </a>
+                <a href="https://soraya.sites.cbmoxi.com/" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-10 py-4 bg-brand-100 hover:bg-brand-200 text-brand-900 font-bold rounded-xl shadow-lg border border-brand-200 transition-all duration-300 text-center text-base transform hover:-translate-y-0.5">
+                    Explore Inventory ➔
+                </a>
+            </div>
+        </div>
+        
+        <!-- Bottom Wave Divider -->
+        <div class="absolute bottom-0 left-0 right-0 h-12 bg-brand-50" style="clip-path: ellipse(60% 100% at 50% 100%);"></div>
+    </header>
+
+    <!-- SECTION 1: THE HOMEBUYING BLUEPRINT -->
+    <section id="blueprint" class="py-16 md:py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="text-accent font-semibold text-xs tracking-widest uppercase block mb-2">Section 1: Setup for Success</span>
+            <h2 class="font-serif text-3xl md:text-5xl font-bold text-brand-900 mb-4">THE FIRST STEP IS FIXED, NOT FLEXIBLE</h2>
+            <div class="w-24 h-1 bg-accent mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+            <!-- Main Content Card -->
+            <div class="lg:col-span-7 bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-slate-100 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-serif text-2xl font-bold text-brand-900 mb-6 flex items-center gap-3">
+                        <span class="p-2 bg-brand-100 text-brand-700 rounded-lg text-sm"><i class="fa-solid fa-file-signature"></i></span>
+                        Pre-Approval is Your Golden Ticket
+                    </h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Before you browse a single home online or step through an open door, the foundation must be poured: <strong class="text-brand-900 font-semibold">Pre-Approval</strong>. Many buyers treat pre-approval like a final step, but it is actually your dynamic launchpad.
+                    </p>
+
+                    <p class="text-slate-600 mb-8 leading-relaxed">
+                        Think of a pre-approval letter as a passport that opens doors. Sellers will not take an unverified offer seriously, and you shouldn't risk falling in love with a property blindfolded.
+                    </p>
+
+                    <!-- Three Critical Things List -->
+                    <div class="space-y-4">
+                        <div class="flex gap-4 items-start p-4 bg-brand-50 rounded-xl border-l-4 border-accent">
+                            <span class="text-accent text-xl mt-1"><i class="fa-solid fa-shield-halved"></i></span>
+                            <div>
+                                <h4 class="font-bold text-brand-900 text-sm md:text-base">1. Elevates Offer Authority</h4>
+                                <p class="text-xs md:text-sm text-slate-600">It shows sellers you are a highly serious, qualified buyer whose offer carries real weight and can close smoothly.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 items-start p-4 bg-brand-50 rounded-xl border-l-4 border-accent">
+                            <span class="text-accent text-xl mt-1"><i class="fa-solid fa-chart-line"></i></span>
+                            <div>
+                                <h4 class="font-bold text-brand-900 text-sm md:text-base">2. Establishes Realistic Budgets</h4>
+                                <p class="text-xs md:text-sm text-slate-600">It sets an exact, realistic monthly payment ceiling so you don't overextend your household budget.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 items-start p-4 bg-brand-50 rounded-xl border-l-4 border-accent">
+                            <span class="text-accent text-xl mt-1"><i class="fa-solid fa-bolt"></i></span>
+                            <div>
+                                <h4 class="font-bold text-brand-900 text-sm md:text-base">3. Unveils True Purchasing Power</h4>
+                                <p class="text-xs md:text-sm text-slate-600">It uncovers exact loan scenarios and down payment variables to prevent back-end transaction surprises.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Insider Tip Side Box (Non-Interactive) -->
+            <div class="lg:col-span-5 bg-brand-900 text-white p-8 md:p-10 rounded-3xl shadow-xl flex flex-col justify-between relative overflow-hidden pointer-events-none">
+                <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-accent/10 rounded-full blur-xl"></div>
+                
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-accent/20 border border-accent/30 text-accent rounded-full text-xs font-semibold uppercase mb-6">
+                        <i class="fa-solid fa-lightbulb"></i> Insider Tip
+                    </div>
+                    <h3 class="font-serif text-2xl md:text-3xl font-bold text-white mb-4">The 14-Day Shopping Window</h3>
+                    <p class="text-accent font-semibold italic text-base mb-6">"Will shopping around ruin my credit score?"</p>
+                    
+                    <p class="text-brand-100 text-sm leading-relaxed mb-6">
+                        This is hands-down the biggest real estate myth. Credit bureaus understand you are comparison shopping. Under federal protection, all mortgage inquiries made within a <strong class="text-white">14-day window</strong> are condensed and treated as a <strong class="text-white">single hard inquiry</strong>.
+                    </p>
+
+                    <div class="p-4 bg-brand-800/80 border border-brand-700 rounded-xl text-xs text-brand-200 leading-relaxed mb-6">
+                        <i class="fa-solid fa-circle-info text-accent mr-1"></i> <strong>Pro Strategy:</strong> You can apply with multiple lenders, contrast rates, verify origination fees, and secure the absolute best deal for your family. The clock starts the moment you submit application #1.
+                    </div>
+                </div>
+
+                <div class="pt-4 border-t border-brand-800">
+                    <button onclick="openModal('advisor')" disabled class="w-full py-3 bg-accent hover:bg-accent-dark text-brand-900 font-bold rounded-xl transition-all duration-300">
+                        Ask Me For Recommended Lenders
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: THE ANATOMY OF A TRANSACTION -->
+    <section id="anatomy" class="bg-brand-900 text-white py-20 px-6 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-10">
+                <span class="text-accent font-semibold text-xs tracking-widest uppercase block mb-2">Section 2: The Numbers game</span>
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-white mb-4">THE ANATOMY OF A TRANSACTION</h2>
+                <p class="text-brand-200 max-w-2xl mx-auto text-sm md:text-base">
+                    Upfront transaction liquidity is divided into two separate, critical buckets: your <span class="text-accent font-semibold">Down Payment</span> (equity) and your <span class="text-accent font-semibold">Closing Costs</span> (administrative fees).
+                </p>
+                <div class="w-24 h-1 bg-accent mx-auto rounded-full mt-6"></div>
+            </div>
+
+            <div class="text-center mb-10">
+                <h3 class="font-serif text-2xl md:text-3xl font-semibold text-white tracking-wide">
+                    Start learning below 👇
+                </h3>
+            </div>
+
+            <!-- Interactivity: Live Closing Cost Calculator -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                
+                <!-- Calculator Controls -->
+                <div class="lg:col-span-5 bg-brand-800/80 p-6 md:p-8 rounded-3xl border border-brand-700 shadow-xl">
+                    <h3 class="font-serif text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-sliders text-accent"></i> Interactive Estimator
+                    </h3>
+                    <p class="text-xs text-brand-200 mb-6">Slide the parameters below to see how standard ranges perform on customized purchase goals.</p>
+
+                    <!-- Slider 1: Purchase Price -->
+                    <div class="mb-6">
+                        <div class="flex justify-between text-sm mb-2">
+                            <span class="text-brand-200 font-medium">Home Purchase Price</span>
+                            <span id="priceVal" class="text-accent font-bold">$200,000</span>
+                        </div>
+                        <input id="priceInput" type="range" min="100000" max="800000" step="10000" value="200000" class="w-full accent-accent bg-brand-950 h-2 rounded-lg appearance-none cursor-pointer">
+                        <div class="flex justify-between text-[10px] text-brand-300 mt-1">
+                            <span>$100k</span>
+                            <span>$300k</span>
+                            <span>$500k</span>
+                            <span>$800k</span>
+                        </div>
+                    </div>
+
+                    <!-- Slider 2: Down Payment % -->
+                    <div class="mb-6">
+                        <div class="flex justify-between text-sm mb-2">
+                            <span class="text-brand-200 font-medium">Down Payment %</span>
+                            <span id="downVal" class="text-accent font-bold">3.5% (FHA Min)</span>
+                        </div>
+                        <input id="downInput" type="range" min="3" max="20" step="0.5" value="3.5" class="w-full accent-accent bg-brand-950 h-2 rounded-lg appearance-none cursor-pointer">
+                        <div class="flex justify-between text-[10px] text-brand-300 mt-1">
+                            <span>3% (Conventional)</span>
+                            <span>5%</span>
+                            <span>10%</span>
+                            <span>20% (Standard)</span>
+                        </div>
+                    </div>
+
+                    <!-- Slider 3: Closing Costs % -->
+                    <div class="mb-6">
+                        <div class="flex justify-between text-sm mb-2">
+                            <span class="text-brand-200 font-medium">Est. Closing Costs %</span>
+                            <span id="closeVal" class="text-accent font-bold">3%</span>
+                        </div>
+                        <input id="closeInput" type="range" min="2" max="4" step="0.5" value="3" class="w-full accent-accent bg-brand-950 h-2 rounded-lg appearance-none cursor-pointer">
+                        <div class="flex justify-between text-[10px] text-brand-300 mt-1">
+                            <span>2% (Low estimate)</span>
+                            <span>3% (Average)</span>
+                            <span>4% (High estimate)</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-brand-900 p-4 rounded-xl border border-brand-700/60 text-xs text-brand-200 flex items-start gap-2">
+                        <i class="fa-solid fa-circle-exclamation text-accent mt-0.5"></i>
+                        <span>Down payments differ by loan program (FHA minimums are 3.5%, while specialized conventional starts at 3% or 5%).</span>
+                    </div>
+                </div>
+
+                <!-- Calculator Output Table & Strategy -->
+                <div class="lg:col-span-7 space-y-8">
+                    <div class="bg-white text-slate-800 p-6 md:p-8 rounded-3xl shadow-xl overflow-x-auto">
+                        <h3 class="font-serif text-xl font-bold text-brand-900 mb-6 flex items-center justify-between">
+                            <span>Mathematical Blueprint</span>
+                            <span class="text-xs bg-brand-100 text-brand-800 px-3 py-1 rounded-full font-sans font-semibold">Estimated Liquidity</span>
+                        </h3>
+
+                        <!-- Outputs Table -->
+                        <table class="w-full text-left border-collapse text-xs md:text-sm">
+                            <thead>
+                                <tr class="border-b border-slate-200 text-slate-500 font-semibold">
+                                    <th class="py-3 pr-2">Category</th>
+                                    <th class="py-3 px-2">Percentage Rate</th>
+                                    <th class="py-3 px-2 text-right">Cash Required</th>
+                                    <th class="py-3 pl-2 hidden sm:table-cell">What It Covers</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                                    <td class="py-4 pr-2 font-semibold text-brand-900">Down Payment</td>
+                                    <td class="py-4 px-2" id="tableDownRate">3.5%</td>
+                                    <td class="py-4 px-2 text-right font-bold text-brand-800" id="tableDownCash">$7,000</td>
+                                    <td class="py-4 pl-2 text-xs text-slate-500 hidden sm:table-cell">Your initial equity/ownership stake.</td>
+                                </tr>
+                                <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                                    <td class="py-4 pr-2 font-semibold text-brand-900">Closing Costs</td>
+                                    <td class="py-4 px-2" id="tableCloseRate">3.0%</td>
+                                    <td class="py-4 px-2 text-right font-bold text-brand-800" id="tableCloseCash">$6,000</td>
+                                    <td class="py-4 pl-2 text-xs text-slate-500 hidden sm:table-cell">Title, attorney, escrow fees, & recording taxes.</td>
+                                </tr>
+                                <tr class="bg-accent/10 font-semibold border-t-2 border-accent hover:bg-accent/15 transition-colors">
+                                    <td class="py-4 pr-2 font-bold text-brand-900">TOTAL OUT-OF-POCKET</td>
+                                    <td class="py-4 px-2" id="tableTotalRate">6.5%</td>
+                                    <td class="py-4 px-2 text-right font-bold text-accent-dark text-lg" id="tableTotalCash">$13,000</td>
+                                    <td class="py-4 pl-2 text-xs text-slate-600 hidden sm:table-cell">The liquid balance required to seal ownership.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Calculator Legal Disclaimer -->
+                    <div class="bg-brand-850/80 p-6 md:p-8 rounded-3xl border border-brand-700 shadow-md">
+                        <div class="flex gap-4 items-start">
+                            <span class="text-accent text-3xl"><i class="fa-solid fa-circle-info"></i></span>
+                            <div>
+                                <p class="text-sm text-brand-100 leading-relaxed">
+                                    💡 <strong>Please Note:</strong> This calculator provides a general baseline. Final out-of-pocket costs vary based on specific property conditions, individual seller flexibility, and your eligibility for state-level assistance programs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: THE 5-STEP JOURNEY AT A GLANCE -->
+    <section id="journey" class="py-20 md:py-28 px-6 max-w-5xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="text-accent font-semibold text-xs tracking-widest uppercase block mb-2">Section 3: Your Roadmap</span>
+            <h2 class="font-serif text-3xl md:text-5xl font-bold text-brand-900 mb-4">THE 5-STEP JOURNEY AT A GLANCE</h2>
+            <div class="w-24 h-1 bg-accent mx-auto rounded-full"></div>
+        </div>
+
+        <!-- Vertical Timeline -->
+        <div class="relative border-l-2 border-brand-200 ml-4 md:ml-32 py-4 space-y-12">
+            
+            <!-- Step 1 -->
+            <div class="relative pl-8 md:pl-12 group">
+                <!-- Timeline bullet badge -->
+                <div class="absolute -left-5 top-1.5 w-10 h-10 rounded-full bg-brand-900 text-accent font-bold text-sm flex items-center justify-center border-4 border-brand-50 shadow-md group-hover:scale-110 transition-transform duration-300">
+                    1
+                </div>
+                <!-- Timeline Desktop Badge (Left Side) -->
+                <div class="hidden md:block absolute -left-36 top-2.5 w-24 text-right text-slate-400 font-bold uppercase text-xs tracking-widest">
+                    Pre-Approval
+                </div>
+
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-slate-100 hover:shadow-xl transition-all duration-300">
+                    <h3 class="font-serif text-xl font-bold text-brand-900 mb-2">The Launch (Pre-Approval)</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        We partner with a premier, trusted local lender to secure your pre-approval letter and lock down your <span class="text-brand-700 font-semibold">14-day shopping window</span>, ensuring we have a concrete budget map before scanning real estate listings.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="relative pl-8 md:pl-12 group">
+                <div class="absolute -left-5 top-1.5 w-10 h-10 rounded-full bg-brand-900 text-accent font-bold text-sm flex items-center justify-center border-4 border-brand-50 shadow-md group-hover:scale-110 transition-transform duration-300">
+                    2
+                </div>
+                <div class="hidden md:block absolute -left-36 top-2.5 w-24 text-right text-slate-400 font-bold uppercase text-xs tracking-widest">
+                    The Search
+                </div>
+
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-slate-100 hover:shadow-xl transition-all duration-300">
+                    <h3 class="font-serif text-xl font-bold text-brand-900 mb-2">The Strategy Match</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        We curate a highly customized property dashboard and begin touring properties that align seamlessly with both your financial comfort guidelines and your everyday lifestyle milestones.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="relative pl-8 md:pl-12 group">
+                <div class="absolute -left-5 top-1.5 w-10 h-10 rounded-full bg-brand-900 text-accent font-bold text-sm flex items-center justify-center border-4 border-brand-50 shadow-md group-hover:scale-110 transition-transform duration-300">
+                    3
+                </div>
+                <div class="hidden md:block absolute -left-36 top-2.5 w-24 text-right text-slate-400 font-bold uppercase text-xs tracking-widest">
+                    Offer & Escrow
+                </div>
+
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-slate-100 hover:shadow-xl transition-all duration-300">
+                    <h3 class="font-serif text-xl font-bold text-brand-900 mb-2">The Anchor</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        We construct and submit a compelling legal offer. Once accepted, your initial <span class="text-brand-700 font-semibold">Escrow Deposit</span> (typically 1% of the house price) is secured in an independent holding account, legally reserving the property for you.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="relative pl-8 md:pl-12 group">
+                <div class="absolute -left-5 top-1.5 w-10 h-10 rounded-full bg-brand-900 text-accent font-bold text-sm flex items-center justify-center border-4 border-brand-50 shadow-md group-hover:scale-110 transition-transform duration-300">
+                    4
+                </div>
+                <div class="hidden md:block absolute -left-36 top-2.5 w-24 text-right text-slate-400 font-bold uppercase text-xs tracking-widest">
+                    Verification
+                </div>
+
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-slate-100 hover:shadow-xl transition-all duration-300">
+                    <h3 class="font-serif text-xl font-bold text-brand-900 mb-2">The Verification</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        We deploy certified property inspectors to check the structural and system elements of the house. Simultaneously, the bank deploys an appraiser to guarantee the property valuation matches every single dollar you are offering to pay.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="relative pl-8 md:pl-12 group">
+                <div class="absolute -left-5 top-1.5 w-10 h-10 rounded-full bg-brand-900 text-accent font-bold text-sm flex items-center justify-center border-4 border-brand-50 shadow-md group-hover:scale-110 transition-transform duration-300">
+                    5
+                </div>
+                <div class="hidden md:block absolute -left-36 top-2.5 w-24 text-right text-slate-400 font-bold uppercase text-xs tracking-widest">
+                    Closing
+                </div>
+
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-slate-100 hover:shadow-xl transition-all duration-300">
+                    <h3 class="font-serif text-xl font-bold text-brand-900 mb-2">The Keys (Closing Day)</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        You arrange the remaining cash-to-close balance via verified bank wire transfer, sign the deeds and loan covenants, and receive the physical keys. Congratulations—you are now officially the master of your new estate!
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MORTGAGE PROTECTION SECTION -->
+    <section id="protection" class="bg-brand-900 text-white relative py-20 px-6 border-t border-brand-800">
+        <!-- Accent Glow background decoration -->
+        <div class="absolute right-0 bottom-0 top-0 left-0 bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-accent/10 via-transparent to-transparent pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <span class="text-accent font-semibold text-xs tracking-widest uppercase block mb-3">Protect Your Investment</span>
+            <h2 class="font-serif text-3xl md:text-5xl font-bold mb-6">Securing Your Family’s Legacy</h2>
+            
+            <p class="text-brand-100 text-sm md:text-base leading-relaxed max-w-2xl mx-auto mb-8">
+                Buying a home is the most rewarding legacy you will build, but safeguarding that mortgage is vital. In the event of unexpected life events, Mortgage Protection Insurance ensures your loved ones can remain in their home without ever inheriting the burden of mortgage bills. As a dual-licensed professional, I am also a Life Insurance Agent specializing in Mortgage Protection—ensuring your family and your new home remain secure, no matter what the future holds.
+            </p>
+
+            <div class="max-w-xl mx-auto bg-brand-850 p-6 rounded-2xl border border-brand-700 shadow-xl mb-10 text-left">
+                <div class="flex items-start gap-3">
+                    <span class="text-accent text-2xl mt-0.5"><i class="fa-solid fa-file-invoice-dollar"></i></span>
+                    <div>
+                        <h4 class="font-bold text-white text-sm md:text-base mb-1">What is Mortgage Protection?</h4>
+                        <p class="text-xs text-brand-200 leading-relaxed">
+                            It is a specialized life insurance policy designed specifically to pay off your home loan should anything happen to you. Avoid foreclosure and guarantee your family keeps their physical sanctuary.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Call Button to Simulated Life Insurance Page -->
+            <div>
+                <a href="https://agents.ethoslife.com/invite/4a869" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-accent hover:bg-accent-dark text-brand-900 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                    <span>Explore Mortgage Protection (Life Insurance)</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- DUAL OPTION / SECONDARY REAL ESTATE MARKET SECTION -->
+    <section id="sell-or-protect" class="bg-brand-100 py-20 px-6 border-t border-brand-200 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-stretch">
+                
+                <!-- Left Column: Ready to Sell? -->
+                <div class="bg-white p-8 md:p-10 rounded-3xl shadow-lg border border-slate-100 flex flex-col justify-between hover:shadow-xl transition-shadow duration-300">
+                    <div>
+                        <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center text-brand-700 text-xl mb-6">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-brand-900 mb-2">Ready to Sell?</h3>
+                        <h4 class="font-semibold text-accent-dark text-sm tracking-wide uppercase mb-4">Get a Custom CMA Report</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-8">
+                            A CMA (Comparative Market Analysis) is a custom evaluation that reveals your home's true, maximum market value. Request a personalized Comparative Market Analysis using live, local MLS data to uncover your home's true maximum value.
+                        </p>
+                    </div>
+                    <div>
+                        <a href="https://forms.gle/xxazvikMfsUdZnWn7" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-brand-900 hover:bg-brand-800 text-white font-bold py-3.5 px-6 rounded-xl shadow-md transition-all duration-300">
+                            <span>Request My Custom CMA</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Not Ready to Sell? -->
+                <div class="bg-white p-8 md:p-10 rounded-3xl shadow-lg border border-slate-100 flex flex-col justify-between hover:shadow-xl transition-shadow duration-300">
+                    <div>
+                        <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center text-accent-dark text-xl mb-6">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-brand-900 mb-2">Not Ready to Sell?</h3>
+                        <h4 class="font-semibold text-accent-dark text-sm tracking-wide uppercase mb-4">Protecting Your Equity is Very Important</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-8">
+                            Unexpected life events shouldn't put your greatest financial asset at risk. Safeguard what you’ve built with tailored mortgage and asset protection so your family’s home remains secure no matter what.
+                        </p>
+                    </div>
+                    <div>
+                        <a href="https://agents.ethoslife.com/invite/4a869" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-dark text-brand-900 font-bold py-3.5 px-6 rounded-xl shadow-md transition-all duration-300">
+                            <span>Secure My Equity Protection</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (Updated alignment to items-end) -->
+    <footer class="bg-brand-950 text-brand-300 text-xs py-10 px-6 border-t border-brand-900">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-end gap-8">
+            
+            <!-- LEFT ELEMENT: Copyright -->
+            <div class="text-center md:text-left">
+                <p>&copy; 2026 The Empowered Buyer. All rights reserved.</p>
+                <p class="text-[10px] text-brand-400 mt-1">Information provided is educational. Individual loan qualifications vary.</p>
+            </div>
+            
+            <!-- RIGHT SIDE ELEMENTS (Icons + QR Code) -->
+            <div class="flex items-end gap-6">
+                <!-- Social Icons -->
+                <div class="flex gap-4 text-2xl items-center pb-1">
+                    <a href="#" class="hover:text-accent transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="hover:text-accent transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-accent transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <!-- Save My Info QR Code Section -->
+                <div class="flex flex-col items-center gap-2">
+                    <span class="font-bold uppercase tracking-widest text-[10px] text-accent">Save My Info</span>
+                    <div class="w-20 h-20 md:w-24 md:h-24 bg-white border-4 border-white rounded-xl overflow-hidden shadow-md">
+                        <img src="Home&Life QRCode.png" alt="Home & Life QR Code" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/160x160/ffffff/c5a059?text=QR'">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+
+
+    <!-- DYNAMIC POPUP MODAL (Simulated Pages) -->
+    <div id="generalModal" class="fixed inset-0 bg-brand-950/80 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden opacity-0 transition-all duration-300">
+        <div class="bg-white text-slate-800 w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl border border-slate-100 relative transform scale-95 transition-all duration-300" id="modalContainer">
+            
+            <!-- Modal Header -->
+            <div class="bg-brand-900 text-white p-6 relative">
+                <button onclick="closeModal()" class="absolute top-6 right-6 text-brand-300 hover:text-white transition-colors text-lg">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <h3 class="font-serif text-2xl font-bold" id="modalTitle">Request Consultation</h3>
+                <p class="text-brand-200 text-xs mt-1" id="modalSubtitle">We will respond within 2 hours.</p>
+            </div>
+
+            <!-- Modal Content Block -->
+            <div class="p-6 md:p-8" id="modalBody">
+                <!-- Fallback content if any -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification for Form Success -->
+    <div id="successToast" class="fixed bottom-6 right-6 bg-brand-900 text-white border-l-4 border-accent p-4 rounded-xl shadow-2xl z-50 max-w-sm hidden transform translate-y-10 transition-all duration-300">
+        <div class="flex items-start gap-3">
+            <span class="text-accent text-xl"><i class="fa-solid fa-circle-check"></i></span>
+            <div>
+                <h5 class="font-bold text-sm text-white">Success!</h5>
+                <p class="text-xs text-brand-200" id="toastMsg">Your educational resources are being compiled.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        const priceInput = document.getElementById('priceInput');
+        const downInput = document.getElementById('downInput');
+        const closeInput = document.getElementById('closeInput');
+
+        const priceVal = document.getElementById('priceVal');
+        const downVal = document.getElementById('downVal');
+        const closeVal = document.getElementById('closeVal');
+
+        const tableDownRate = document.getElementById('tableDownRate');
+        const tableDownCash = document.getElementById('tableDownCash');
+        const tableCloseRate = document.getElementById('tableCloseRate');
+        const tableCloseCash = document.getElementById('tableCloseCash');
+        const tableTotalRate = document.getElementById('tableTotalRate');
+        const tableTotalCash = document.getElementById('tableTotalCash');
+
+        function updateMath() {
+            const price = parseFloat(priceInput.value);
+            const downPct = parseFloat(downInput.value);
+            const closePct = parseFloat(closeInput.value);
+
+            // Calculate exact figures
+            const downCash = (price * downPct) / 100;
+            const closeCash = (price * closePct) / 100;
+            const totalCash = downCash + closeCash;
+            const totalPct = downPct + closePct;
+
+            // Render updates to labels
+            priceVal.innerText = `$${price.toLocaleString()}`;
+            
+            if(downPct === 3.5) {
+                downVal.innerText = `${downPct}% (FHA Min)`;
+            } else if (downPct === 3) {
+                downVal.innerText = `${downPct}% (Conventional Min)`;
+            } else {
+                downVal.innerText = `${downPct}%`;
+            }
+
+            closeVal.innerText = `${closePct}%`;
+
+            // Render updates to Table
+            tableDownRate.innerText = `${downPct}%`;
+            tableDownCash.innerText = `$${downCash.toLocaleString()}`;
+
+            tableCloseRate.innerText = `${closePct}%`;
+            tableCloseCash.innerText = `$${closeCash.toLocaleString()}`;
+
+            tableTotalRate.innerText = `${totalPct}%`;
+            tableTotalCash.innerText = `$${totalCash.toLocaleString()}`;
+        }
+
+        // Add Listeners
+        priceInput.addEventListener('input', updateMath);
+        downInput.addEventListener('input', updateMath);
+        closeInput.addEventListener('input', updateMath);
+
+
+        const modal = document.getElementById('generalModal');
+        const modalContainer = document.getElementById('modalContainer');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalSubtitle = document.getElementById('modalSubtitle');
+        const modalBody = document.getElementById('modalBody');
+
+        function openModal(type) {
+            if(type === 'advisor') {
+                modalTitle.innerText = "Begin Your Educational Match";
+                modalSubtitle.innerText = "Schedule your zero-pressure custom roadmap consultation.";
+                modalBody.innerHTML = `
+                    <form onsubmit="handleFormSubmit(event, 'Roadmap Reservation Completed!')" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-500 uppercase mb-1">Your Full Name</label>
+                            <input type="text" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-500 uppercase mb-1">Email Address</label>
+                            <input type="email" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent" placeholder="john@example.com">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-500 uppercase mb-1">Current Savings</label>
+                                <select class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent">
+                                    <option>$0 - $5,000</option>
+                                    <option>$5,000 - $15,000</option>
+                                    <option>$15,000 - $30,000</option>
+                                    <option>$30,000+</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-500 uppercase mb-1">Ideal Purchase Timeline</label>
+                                <select class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent">
+                                    <option>Immediate (0-3 Months)</option>
+                                    <option>Planning (3-6 Months)</option>
+                                    <option>Researching (6+ Months)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-accent hover:bg-accent-dark text-brand-900 font-bold rounded-xl shadow-lg transition-all mt-2">
+                            Secure My Free Education Strategy Session
+                        </button>
+                    </form>
+                `;
+            } else if (type === 'life-insurance') {
+                modalTitle.innerText = "Mortgage Protection Life Insurance";
+                modalSubtitle.innerText = "Keep your sanctuary safe. Calculate standard safeguards.";
+                modalBody.innerHTML = `
+                    <div class="space-y-5">
+                        <div class="p-4 bg-accent/10 border border-accent/20 rounded-xl text-xs text-brand-900 leading-relaxed">
+                            <i class="fa-solid fa-shield-heart text-accent text-base mr-1.5 align-middle"></i>
+                            <strong>Mortgage Protection</strong> guarantees that in the event of death, disability, or critical illness, your insurance policy covers the remaining lender debt directly so your family is debt-free.
+                        </div>
+                        
+                        <form onsubmit="handleFormSubmit(event, 'Safeguard quote requested successfully!')" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-500 uppercase mb-1">Approximate Mortgage Balance</label>
+                                <select class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent">
+                                    <option>$100k - $250k</option>
+                                    <option>$250k - $450k</option>
+                                    <option>$450k - $650k</option>
+                                    <option>$650k+</option>
+                                </select>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-500 uppercase mb-1">Your Age</label>
+                                    <input type="number" required min="18" max="85" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent" placeholder="32">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-500 uppercase mb-1">Contact Number</label>
+                                    <input type="tel" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent" placeholder="(555) 000-0000">
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <input type="checkbox" id="critical" checked class="accent-accent">
+                                <label for="critical" class="text-xs text-slate-600">Include living benefits (disability/critical illness payout)</label>
+                            </div>
+                            <button type="submit" class="w-full py-4 bg-accent hover:bg-accent-dark text-brand-900 font-bold rounded-xl shadow-lg transition-all mt-2">
+                                Generate Free Premium Quotes
+                            </button>
+                        </form>
+                    </div>
+                `;
+            } else if (type === 'cma') {
+                modalTitle.innerText = "Custom CMA Value Report";
+                modalSubtitle.innerText = "Request a personalized Comparative Market Analysis using live, local MLS data.";
+                modalBody.innerHTML = `
+                    <form onsubmit="handleFormSubmit(event, 'Custom CMA evaluation request submitted!')" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-500 uppercase mb-1">Property Address</label>
+                            <input type="text" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-900" placeholder="123 Main Street, City, State, Zip">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-500 uppercase mb-1">Estimate Bedrooms / Baths</label>
+                                <input type="text" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-900" placeholder="3 Bed, 2 Bath">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-500 uppercase mb-1">Contact Email</label>
+                                <input type="email" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-900" placeholder="your@email.com">
+                            </div>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-brand-900 hover:bg-brand-800 text-white font-bold rounded-xl shadow-lg transition-all mt-2">
+                            Request My Custom CMA Report
+                        </button>
+                    </form>
+                `;
+            }
+
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modalContainer.classList.remove('scale-95');
+            }, 10);
+        }
+
+        function closeModal() {
+            modal.classList.add('opacity-0');
+            modalContainer.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        // Close modal on gray space click
+        modal.addEventListener('click', (e) => {
+            if(e.target === modal) closeModal();
+        });
+
+        /* Handle Form Submit */
+        function handleFormSubmit(event, text) {
+            event.preventDefault();
+            closeModal();
+            
+            const toast = document.getElementById('successToast');
+            const toastMsg = document.getElementById('toastMsg');
+            
+            toastMsg.innerText = text;
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.remove('translate-y-10');
+            }, 10);
+
+            setTimeout(() => {
+                toast.classList.add('translate-y-10');
+                setTimeout(() => {
+                    toast.classList.add('hidden');
+                }, 300);
+            }, 4000);
+        }
+
+        // Safely attach links to the existing social media icons
+        document.addEventListener("DOMContentLoaded", function() {
+            const fbIcon = document.querySelector('.fa-facebook')?.parentElement;
+            const igIcon = document.querySelector('.fa-instagram')?.parentElement;
+            const liIcon = document.querySelector('.fa-linkedin')?.parentElement;
+
+            if (fbIcon) {
+                fbIcon.setAttribute('href', 'https://www.facebook.com/profile.php?id=100085378370968');
+                fbIcon.setAttribute('target', '_blank');
+                fbIcon.setAttribute('rel', 'noopener noreferrer');
+            }
+            if (igIcon) {
+                igIcon.setAttribute('href', 'https://www.instagram.com/beyondtoday2025/');
+                igIcon.setAttribute('target', '_blank');
+                igIcon.setAttribute('rel', 'noopener noreferrer');
+            }
+            if (liIcon) {
+                liIcon.setAttribute('href', 'https://www.linkedin.com/in/soraya-mendoza-90a79824b/');
+                liIcon.setAttribute('target', '_blank');
+                liIcon.setAttribute('rel', 'noopener noreferrer');
+            }
+        });
+    </script>
+</body>
+</html>
