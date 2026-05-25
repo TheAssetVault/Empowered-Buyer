@@ -247,10 +247,11 @@
                 <div class="w-24 h-1 bg-accent mx-auto rounded-full mt-6"></div>
             </div>
 
-            <div class="text-center mb-10">
-                <h3 class="font-serif text-2xl md:text-3xl font-semibold text-white tracking-wide">
-                    Start learning below 👇
-                </h3>
+            <div class="flex justify-center items-center gap-4 mb-10">
+                <div>
+                    <span class="text-white">Start learning below 👇</span>
+                </div>
+                <button class="bg-accent text-brand-900 px-6 py-2 rounded-lg font-bold"><a href="https://www.sunbelttitle.com/calculators/" target="_blank">Calculators</a></button>
             </div>
 
             <!-- Interactivity: Live Closing Cost Calculator -->
@@ -264,7 +265,7 @@
                     <p class="text-xs text-brand-200 mb-6">Slide the parameters below to see how standard ranges perform on customized purchase goals.</p>
 
                     <!-- Slider 1: Purchase Price -->
-                    <div class="mb-6">
+                    <div class="mb-6 pointer-events-none">
                         <div class="flex justify-between text-sm mb-2">
                             <span class="text-brand-200 font-medium">Home Purchase Price</span>
                             <span id="priceVal" class="text-accent font-bold">$200,000</span>
@@ -279,7 +280,7 @@
                     </div>
 
                     <!-- Slider 2: Down Payment % -->
-                    <div class="mb-6">
+                    <div class="mb-6 pointer-events-none">
                         <div class="flex justify-between text-sm mb-2">
                             <span class="text-brand-200 font-medium">Down Payment %</span>
                             <span id="downVal" class="text-accent font-bold">3.5% (FHA Min)</span>
@@ -294,7 +295,7 @@
                     </div>
 
                     <!-- Slider 3: Closing Costs % -->
-                    <div class="mb-6">
+                    <div class="mb-6 pointer-events-none">
                         <div class="flex justify-between text-sm mb-2">
                             <span class="text-brand-200 font-medium">Est. Closing Costs %</span>
                             <span id="closeVal" class="text-accent font-bold">3%</span>
@@ -470,6 +471,12 @@
             </div>
 
         </div>
+
+        <div class="text-center mt-12">
+            <a href="https://forms.gle/i4BtaAgpgsbhiPoN9" target="_blank" rel="noopener noreferrer" class="bg-accent hover:bg-accent-dark text-brand-900 font-bold px-10 py-4 rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 inline-block">
+                Ready To Buy?
+            </a>
+        </div>
     </section>
 
     <!-- MORTGAGE PROTECTION SECTION -->
@@ -477,32 +484,41 @@
         <!-- Accent Glow background decoration -->
         <div class="absolute right-0 bottom-0 top-0 left-0 bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-accent/10 via-transparent to-transparent pointer-events-none"></div>
 
-        <div class="max-w-4xl mx-auto text-center relative z-10">
-            <span class="text-accent font-semibold text-xs tracking-widest uppercase block mb-3">Protect Your Investment</span>
-            <h2 class="font-serif text-3xl md:text-5xl font-bold mb-6">Securing Your Family’s Legacy</h2>
+        <div class="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12">
             
-            <p class="text-brand-100 text-sm md:text-base leading-relaxed max-w-2xl mx-auto mb-8">
-                Buying a home is the most rewarding legacy you will build, but safeguarding that mortgage is vital. In the event of unexpected life events, Mortgage Protection Insurance ensures your loved ones can remain in their home without ever inheriting the burden of mortgage bills. As a dual-licensed professional, I am also a Life Insurance Agent specializing in Mortgage Protection—ensuring your family and your new home remain secure, no matter what the future holds.
-            </p>
+            <!-- Centered Content -->
+            <div class="lg:col-span-12 flex flex-col items-center text-center">
+                <div class="relative z-10">
+                    <span class="text-accent font-semibold text-xs tracking-widest uppercase block mb-3">Protect Your Investment</span>
+                    <h2 class="font-serif text-3xl md:text-5xl font-bold mb-6">Securing Your Family’s Legacy</h2>
+                    
+                    <p class="text-brand-100 text-sm md:text-base leading-relaxed max-w-2xl mx-auto mb-8">
+                        Buying a home is the most rewarding legacy you will build, but safeguarding that mortgage is vital. In the event of unexpected life events, Mortgage Protection Insurance ensures your loved ones can remain in their home without ever inheriting the burden of mortgage bills. As a dual-licensed professional, I am also a Life Insurance Agent specializing in Mortgage Protection—ensuring your family and your new home remain secure, no matter what the future holds.
+                    </p>
 
-            <div class="max-w-xl mx-auto bg-brand-850 p-6 rounded-2xl border border-brand-700 shadow-xl mb-10 text-left">
-                <div class="flex items-start gap-3">
-                    <span class="text-accent text-2xl mt-0.5"><i class="fa-solid fa-file-invoice-dollar"></i></span>
-                    <div>
-                        <h4 class="font-bold text-white text-sm md:text-base mb-1">What is Mortgage Protection?</h4>
-                        <p class="text-xs text-brand-200 leading-relaxed">
-                            It is a specialized life insurance policy designed specifically to pay off your home loan should anything happen to you. Avoid foreclosure and guarantee your family keeps their physical sanctuary.
-                        </p>
+                    <div class="max-w-xl mx-auto bg-brand-850 p-6 rounded-2xl border border-brand-700 shadow-xl mb-10 text-left">
+                        <div class="flex items-start gap-3">
+                            <span class="text-accent text-2xl mt-0.5"><i class="fa-solid fa-file-invoice-dollar"></i></span>
+                            <div>
+                                <h4 class="font-bold text-white text-sm md:text-base mb-1">What is Mortgage Protection?</h4>
+                                <p class="text-xs text-brand-200 leading-relaxed">
+                                    It is a specialized life insurance policy designed specifically to pay off your home loan should anything happen to you. Avoid foreclosure and guarantee your family keeps their physical sanctuary.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Call Buttons -->
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <a href="https://theassetvault.github.io/LifeInsuranceBasics/" target="_blank" rel="noopener noreferrer" class="bg-slate-100 hover:bg-white text-brand-900 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                            Life Insurance Explained
+                        </a>
+                        <a href="https://agents.ethoslife.com/invite/4a869" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-accent hover:bg-accent-dark text-brand-900 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                            <span>Explore Mortgage Protection (Life Insurance)</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
-            </div>
-
-            <!-- CTA Call Button to Simulated Life Insurance Page -->
-            <div>
-                <a href="https://agents.ethoslife.com/invite/4a869" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-accent hover:bg-accent-dark text-brand-900 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                    <span>Explore Mortgage Protection (Life Insurance)</span>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
             </div>
         </div>
     </section>
@@ -556,25 +572,19 @@
         </div>
     </section>
 
-    <!-- FOOTER (Updated alignment to items-end) -->
+    <!-- FOOTER -->
     <footer class="bg-brand-950 text-brand-300 text-xs py-10 px-6 border-t border-brand-900">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-end gap-8">
-            
-            <!-- LEFT ELEMENT: Copyright -->
             <div class="text-center md:text-left">
                 <p>&copy; 2026 The Empowered Buyer. All rights reserved.</p>
                 <p class="text-[10px] text-brand-400 mt-1">Information provided is educational. Individual loan qualifications vary.</p>
             </div>
-            
-            <!-- RIGHT SIDE ELEMENTS (Icons + QR Code) -->
             <div class="flex items-end gap-6">
-                <!-- Social Icons -->
                 <div class="flex gap-4 text-2xl items-center pb-1">
-                    <a href="#" class="hover:text-accent transition-colors"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#" class="hover:text-accent transition-colors"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="hover:text-accent transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100085378370968" target="_blank" class="hover:text-accent transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/beyondtoday2025/" target="_blank" class="hover:text-accent transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/soraya-mendoza-90a79824b/?skipRedirect=true" target="_blank" class="hover:text-accent transition-colors"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
-                <!-- Save My Info QR Code Section -->
                 <div class="flex flex-col items-center gap-2">
                     <span class="font-bold uppercase tracking-widest text-[10px] text-accent">Save My Info</span>
                     <div class="w-20 h-20 md:w-24 md:h-24 bg-white border-4 border-white rounded-xl overflow-hidden shadow-md">
@@ -582,16 +592,12 @@
                     </div>
                 </div>
             </div>
-            
         </div>
     </footer>
-
 
     <!-- DYNAMIC POPUP MODAL (Simulated Pages) -->
     <div id="generalModal" class="fixed inset-0 bg-brand-950/80 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden opacity-0 transition-all duration-300">
         <div class="bg-white text-slate-800 w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl border border-slate-100 relative transform scale-95 transition-all duration-300" id="modalContainer">
-            
-            <!-- Modal Header -->
             <div class="bg-brand-900 text-white p-6 relative">
                 <button onclick="closeModal()" class="absolute top-6 right-6 text-brand-300 hover:text-white transition-colors text-lg">
                     <i class="fa-solid fa-xmark"></i>
@@ -599,35 +605,17 @@
                 <h3 class="font-serif text-2xl font-bold" id="modalTitle">Request Consultation</h3>
                 <p class="text-brand-200 text-xs mt-1" id="modalSubtitle">We will respond within 2 hours.</p>
             </div>
-
-            <!-- Modal Content Block -->
-            <div class="p-6 md:p-8" id="modalBody">
-                <!-- Fallback content if any -->
-            </div>
+            <div class="p-6 md:p-8" id="modalBody"></div>
         </div>
     </div>
 
-    <!-- Toast Notification for Form Success -->
-    <div id="successToast" class="fixed bottom-6 right-6 bg-brand-900 text-white border-l-4 border-accent p-4 rounded-xl shadow-2xl z-50 max-w-sm hidden transform translate-y-10 transition-all duration-300">
-        <div class="flex items-start gap-3">
-            <span class="text-accent text-xl"><i class="fa-solid fa-circle-check"></i></span>
-            <div>
-                <h5 class="font-bold text-sm text-white">Success!</h5>
-                <p class="text-xs text-brand-200" id="toastMsg">Your educational resources are being compiled.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- SCRIPTS -->
     <script>
         const priceInput = document.getElementById('priceInput');
         const downInput = document.getElementById('downInput');
         const closeInput = document.getElementById('closeInput');
-
         const priceVal = document.getElementById('priceVal');
         const downVal = document.getElementById('downVal');
         const closeVal = document.getElementById('closeVal');
-
         const tableDownRate = document.getElementById('tableDownRate');
         const tableDownCash = document.getElementById('tableDownCash');
         const tableCloseRate = document.getElementById('tableCloseRate');
@@ -639,42 +627,23 @@
             const price = parseFloat(priceInput.value);
             const downPct = parseFloat(downInput.value);
             const closePct = parseFloat(closeInput.value);
-
-            // Calculate exact figures
             const downCash = (price * downPct) / 100;
             const closeCash = (price * closePct) / 100;
             const totalCash = downCash + closeCash;
             const totalPct = downPct + closePct;
-
-            // Render updates to labels
             priceVal.innerText = `$${price.toLocaleString()}`;
-            
-            if(downPct === 3.5) {
-                downVal.innerText = `${downPct}% (FHA Min)`;
-            } else if (downPct === 3) {
-                downVal.innerText = `${downPct}% (Conventional Min)`;
-            } else {
-                downVal.innerText = `${downPct}%`;
-            }
-
+            downVal.innerText = `${downPct}%`;
             closeVal.innerText = `${closePct}%`;
-
-            // Render updates to Table
             tableDownRate.innerText = `${downPct}%`;
             tableDownCash.innerText = `$${downCash.toLocaleString()}`;
-
             tableCloseRate.innerText = `${closePct}%`;
             tableCloseCash.innerText = `$${closeCash.toLocaleString()}`;
-
             tableTotalRate.innerText = `${totalPct}%`;
             tableTotalCash.innerText = `$${totalCash.toLocaleString()}`;
         }
-
-        // Add Listeners
-        priceInput.addEventListener('input', updateMath);
-        downInput.addEventListener('input', updateMath);
-        closeInput.addEventListener('input', updateMath);
-
+        priceInput?.addEventListener('input', updateMath);
+        downInput?.addEventListener('input', updateMath);
+        closeInput?.addEventListener('input', updateMath);
 
         const modal = document.getElementById('generalModal');
         const modalContainer = document.getElementById('modalContainer');
@@ -685,171 +654,20 @@
         function openModal(type) {
             if(type === 'advisor') {
                 modalTitle.innerText = "Begin Your Educational Match";
-                modalSubtitle.innerText = "Schedule your zero-pressure custom roadmap consultation.";
-                modalBody.innerHTML = `
-                    <form onsubmit="handleFormSubmit(event, 'Roadmap Reservation Completed!')" class="space-y-4">
-                        <div>
-                            <label class="block text-xs font-semibold text-slate-500 uppercase mb-1">Your Full Name</label>
-                            <input type="text" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent" placeholder="John Doe">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-semibold text-slate-500 uppercase mb-1">Email Address</label>
-                            <input type="email" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent" placeholder="john@example.com">
-                        </div>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-500 uppercase mb-1">Current Savings</label>
-                                <select class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent">
-                                    <option>$0 - $5,000</option>
-                                    <option>$5,000 - $15,000</option>
-                                    <option>$15,000 - $30,000</option>
-                                    <option>$30,000+</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-500 uppercase mb-1">Ideal Purchase Timeline</label>
-                                <select class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent">
-                                    <option>Immediate (0-3 Months)</option>
-                                    <option>Planning (3-6 Months)</option>
-                                    <option>Researching (6+ Months)</option>
-                                </select>
-                            </div>
-                        </div>
-                        <button type="submit" class="w-full py-4 bg-accent hover:bg-accent-dark text-brand-900 font-bold rounded-xl shadow-lg transition-all mt-2">
-                            Secure My Free Education Strategy Session
-                        </button>
-                    </form>
-                `;
+                modalBody.innerHTML = `<form onsubmit="handleFormSubmit(event)" class="space-y-4"><input type="text" placeholder="Name" class="w-full p-3 border rounded-xl"><button type="submit" class="w-full bg-accent p-3 rounded-xl font-bold">Submit</button></form>`;
             } else if (type === 'life-insurance') {
-                modalTitle.innerText = "Mortgage Protection Life Insurance";
-                modalSubtitle.innerText = "Keep your sanctuary safe. Calculate standard safeguards.";
-                modalBody.innerHTML = `
-                    <div class="space-y-5">
-                        <div class="p-4 bg-accent/10 border border-accent/20 rounded-xl text-xs text-brand-900 leading-relaxed">
-                            <i class="fa-solid fa-shield-heart text-accent text-base mr-1.5 align-middle"></i>
-                            <strong>Mortgage Protection</strong> guarantees that in the event of death, disability, or critical illness, your insurance policy covers the remaining lender debt directly so your family is debt-free.
-                        </div>
-                        
-                        <form onsubmit="handleFormSubmit(event, 'Safeguard quote requested successfully!')" class="space-y-4">
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-500 uppercase mb-1">Approximate Mortgage Balance</label>
-                                <select class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent">
-                                    <option>$100k - $250k</option>
-                                    <option>$250k - $450k</option>
-                                    <option>$450k - $650k</option>
-                                    <option>$650k+</option>
-                                </select>
-                            </div>
-                            <div class="grid grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-xs font-semibold text-slate-500 uppercase mb-1">Your Age</label>
-                                    <input type="number" required min="18" max="85" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent" placeholder="32">
-                                </div>
-                                <div>
-                                    <label class="block text-xs font-semibold text-slate-500 uppercase mb-1">Contact Number</label>
-                                    <input type="tel" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent" placeholder="(555) 000-0000">
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <input type="checkbox" id="critical" checked class="accent-accent">
-                                <label for="critical" class="text-xs text-slate-600">Include living benefits (disability/critical illness payout)</label>
-                            </div>
-                            <button type="submit" class="w-full py-4 bg-accent hover:bg-accent-dark text-brand-900 font-bold rounded-xl shadow-lg transition-all mt-2">
-                                Generate Free Premium Quotes
-                            </button>
-                        </form>
-                    </div>
-                `;
-            } else if (type === 'cma') {
-                modalTitle.innerText = "Custom CMA Value Report";
-                modalSubtitle.innerText = "Request a personalized Comparative Market Analysis using live, local MLS data.";
-                modalBody.innerHTML = `
-                    <form onsubmit="handleFormSubmit(event, 'Custom CMA evaluation request submitted!')" class="space-y-4">
-                        <div>
-                            <label class="block text-xs font-semibold text-slate-500 uppercase mb-1">Property Address</label>
-                            <input type="text" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-900" placeholder="123 Main Street, City, State, Zip">
-                        </div>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-500 uppercase mb-1">Estimate Bedrooms / Baths</label>
-                                <input type="text" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-900" placeholder="3 Bed, 2 Bath">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-500 uppercase mb-1">Contact Email</label>
-                                <input type="email" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-900" placeholder="your@email.com">
-                            </div>
-                        </div>
-                        <button type="submit" class="w-full py-4 bg-brand-900 hover:bg-brand-800 text-white font-bold rounded-xl shadow-lg transition-all mt-2">
-                            Request My Custom CMA Report
-                        </button>
-                    </form>
-                `;
+                modalTitle.innerText = "Life Insurance Basics";
+                modalSubtitle.innerText = "Foundational coverage concepts.";
+                modalBody.innerHTML = `<div class="space-y-4 text-sm text-slate-600"><p>Life insurance acts as a financial safety net. Term life offers temporary, affordable protection, while permanent policies offer lifelong coverage and equity growth.</p></div>`;
             }
-
             modal.classList.remove('hidden');
-            setTimeout(() => {
-                modal.classList.remove('opacity-0');
-                modalContainer.classList.remove('scale-95');
-            }, 10);
+            setTimeout(() => { modal.classList.remove('opacity-0'); modalContainer.classList.remove('scale-95'); }, 10);
         }
-
         function closeModal() {
             modal.classList.add('opacity-0');
             modalContainer.classList.add('scale-95');
-            setTimeout(() => {
-                modal.classList.add('hidden');
-            }, 300);
+            setTimeout(() => modal.classList.add('hidden'), 300);
         }
-
-        // Close modal on gray space click
-        modal.addEventListener('click', (e) => {
-            if(e.target === modal) closeModal();
-        });
-
-        /* Handle Form Submit */
-        function handleFormSubmit(event, text) {
-            event.preventDefault();
-            closeModal();
-            
-            const toast = document.getElementById('successToast');
-            const toastMsg = document.getElementById('toastMsg');
-            
-            toastMsg.innerText = text;
-            toast.classList.remove('hidden');
-            setTimeout(() => {
-                toast.classList.remove('translate-y-10');
-            }, 10);
-
-            setTimeout(() => {
-                toast.classList.add('translate-y-10');
-                setTimeout(() => {
-                    toast.classList.add('hidden');
-                }, 300);
-            }, 4000);
-        }
-
-        // Safely attach links to the existing social media icons
-        document.addEventListener("DOMContentLoaded", function() {
-            const fbIcon = document.querySelector('.fa-facebook')?.parentElement;
-            const igIcon = document.querySelector('.fa-instagram')?.parentElement;
-            const liIcon = document.querySelector('.fa-linkedin')?.parentElement;
-
-            if (fbIcon) {
-                fbIcon.setAttribute('href', 'https://www.facebook.com/profile.php?id=100085378370968');
-                fbIcon.setAttribute('target', '_blank');
-                fbIcon.setAttribute('rel', 'noopener noreferrer');
-            }
-            if (igIcon) {
-                igIcon.setAttribute('href', 'https://www.instagram.com/beyondtoday2025/');
-                igIcon.setAttribute('target', '_blank');
-                igIcon.setAttribute('rel', 'noopener noreferrer');
-            }
-            if (liIcon) {
-                liIcon.setAttribute('href', 'https://www.linkedin.com/in/soraya-mendoza-90a79824b/');
-                liIcon.setAttribute('target', '_blank');
-                liIcon.setAttribute('rel', 'noopener noreferrer');
-            }
-        });
     </script>
 </body>
 </html>
