@@ -265,7 +265,7 @@
                     <p class="text-xs text-brand-200 mb-6">Slide the parameters below to see how standard ranges perform on customized purchase goals.</p>
 
                     <!-- Slider 1: Purchase Price -->
-                    <div class="mb-6 pointer-events-none">
+                    <div class="mb-6">
                         <div class="flex justify-between text-sm mb-2">
                             <span class="text-brand-200 font-medium">Home Purchase Price</span>
                             <span id="priceVal" class="text-accent font-bold">$200,000</span>
@@ -280,7 +280,7 @@
                     </div>
 
                     <!-- Slider 2: Down Payment % -->
-                    <div class="mb-6 pointer-events-none">
+                    <div class="mb-6">
                         <div class="flex justify-between text-sm mb-2">
                             <span class="text-brand-200 font-medium">Down Payment %</span>
                             <span id="downVal" class="text-accent font-bold">3.5% (FHA Min)</span>
@@ -295,7 +295,7 @@
                     </div>
 
                     <!-- Slider 3: Closing Costs % -->
-                    <div class="mb-6 pointer-events-none">
+                    <div class="mb-6">
                         <div class="flex justify-between text-sm mb-2">
                             <span class="text-brand-200 font-medium">Est. Closing Costs %</span>
                             <span id="closeVal" class="text-accent font-bold">3%</span>
@@ -609,6 +609,7 @@
         </div>
     </div>
 
+    <!-- CALCULATOR LOGIC -->
     <script>
         const priceInput = document.getElementById('priceInput');
         const downInput = document.getElementById('downInput');
