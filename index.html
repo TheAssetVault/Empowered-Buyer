@@ -33,6 +33,7 @@
                             700: '#38544b',
                             800: '#2f453f',
                             900: '#14221e', // Slate-forest deep green
+                            950: '#0c1613'
                         },
                         accent: {
                             light: '#dfb76c',
@@ -206,8 +207,8 @@
                 </div>
             </div>
 
-            <!-- Insider Tip Side Box (Non-Interactive) -->
-            <div class="lg:col-span-5 bg-brand-900 text-white p-8 md:p-10 rounded-3xl shadow-xl flex flex-col justify-between relative overflow-hidden pointer-events-none">
+            <!-- Insider Tip Side Box -->
+            <div class="lg:col-span-5 bg-brand-900 text-white p-8 md:p-10 rounded-3xl shadow-xl flex flex-col justify-between relative overflow-hidden">
                 <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-accent/10 rounded-full blur-xl"></div>
                 
                 <div>
@@ -227,7 +228,7 @@
                 </div>
 
                 <div class="pt-4 border-t border-brand-800">
-                    <button onclick="openModal('advisor')" disabled class="w-full py-3 bg-accent hover:bg-accent-dark text-brand-900 font-bold rounded-xl transition-all duration-300">
+                    <button onclick="openModal('advisor')" class="w-full py-3 bg-accent hover:bg-accent-dark text-brand-900 font-bold rounded-xl transition-all duration-300">
                         Ask Me For Recommended Lenders
                     </button>
                 </div>
@@ -251,7 +252,7 @@
                 <div>
                     <span class="text-white">Start learning below 👇</span>
                 </div>
-                <button class="bg-accent text-brand-900 px-6 py-2 rounded-lg font-bold"><a href="https://www.sunbelttitle.com/calculators/" target="_blank">Calculators</a></button>
+                <a href="https://www.sunbelttitle.com/calculators/" target="_blank" class="bg-accent hover:bg-accent-dark text-brand-900 px-6 py-2 rounded-lg font-bold transition-colors">Calculators</a>
             </div>
 
             <!-- Interactivity: Live Closing Cost Calculator -->
@@ -473,7 +474,7 @@
         </div>
 
         <div class="text-center mt-12">
-            <a href="https://forms.gle/i4BtaAgpgsbhiPoN9" target="_blank" rel="noopener noreferrer" class="bg-accent hover:bg-accent-dark text-brand-900 font-bold px-10 py-4 rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 inline-block">
+            <a href="https://sites.google.com/view/homebuyer-assessment-form/full-page-embed" target="_blank" rel="noopener noreferrer" class="bg-accent hover:bg-accent-dark text-brand-900 font-bold px-10 py-4 rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 inline-block">
                 Ready To Buy?
             </a>
         </div>
@@ -541,7 +542,7 @@
                         </p>
                     </div>
                     <div>
-                        <a href="https://forms.gle/xxazvikMfsUdZnWn7" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-brand-900 hover:bg-brand-800 text-white font-bold py-3.5 px-6 rounded-xl shadow-md transition-all duration-300">
+                        <a href="https://sites.google.com/view/cma-assessment-form/full-page-embed" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-brand-900 hover:bg-brand-800 text-white font-bold py-3.5 px-6 rounded-xl shadow-md transition-all duration-300">
                             <span>Request My Custom CMA</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
@@ -642,6 +643,7 @@
             tableTotalRate.innerText = `${totalPct}%`;
             tableTotalCash.innerText = `$${totalCash.toLocaleString()}`;
         }
+
         priceInput?.addEventListener('input', updateMath);
         downInput?.addEventListener('input', updateMath);
         closeInput?.addEventListener('input', updateMath);
@@ -652,18 +654,58 @@
         const modalSubtitle = document.getElementById('modalSubtitle');
         const modalBody = document.getElementById('modalBody');
 
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            modalBody.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <h4 class="font-bold text-lg text-brand-900 mb-2">Request Received!</h4>
+                    <p class="text-sm text-slate-600">Thank you for reaching out. We will get back to you shortly.</p>
+                </div>
+            `;
+        }
+
         function openModal(type) {
             if(type === 'advisor') {
                 modalTitle.innerText = "Begin Your Educational Match";
-                modalBody.innerHTML = `<form onsubmit="handleFormSubmit(event)" class="space-y-4"><input type="text" placeholder="Name" class="w-full p-3 border rounded-xl"><button type="submit" class="w-full bg-accent p-3 rounded-xl font-bold">Submit</button></form>`;
+                modalSubtitle.innerText = "We will respond within 2 hours.";
+                modalBody.innerHTML = `
+                    <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-600 mb-1 uppercase">Full Name</label>
+                            <input type="text" placeholder="John Doe" required class="w-full p-3 border rounded-xl text-sm focus:outline-none focus:border-brand-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-600 mb-1 uppercase">Email Address</label>
+                            <input type="email" placeholder="john@example.com" required class="w-full p-3 border rounded-xl text-sm focus:outline-none focus:border-brand-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-600 mb-1 uppercase">Phone Number</label>
+                            <input type="tel" placeholder="(555) 000-0000" class="w-full p-3 border rounded-xl text-sm focus:outline-none focus:border-brand-500">
+                        </div>
+                        <button type="submit" class="w-full bg-accent hover:bg-accent-dark text-brand-900 font-bold p-3.5 rounded-xl transition-colors text-sm shadow-md">
+                            Submit Request
+                        </button>
+                    </form>
+                `;
             } else if (type === 'life-insurance') {
                 modalTitle.innerText = "Life Insurance Basics";
                 modalSubtitle.innerText = "Foundational coverage concepts.";
-                modalBody.innerHTML = `<div class="space-y-4 text-sm text-slate-600"><p>Life insurance acts as a financial safety net. Term life offers temporary, affordable protection, while permanent policies offer lifelong coverage and equity growth.</p></div>`;
+                modalBody.innerHTML = `
+                    <div class="space-y-4 text-sm text-slate-600">
+                        <p>Life insurance acts as a financial safety net. Term life offers temporary, affordable protection, while permanent policies offer lifelong coverage and equity growth.</p>
+                    </div>
+                `;
             }
             modal.classList.remove('hidden');
-            setTimeout(() => { modal.classList.remove('opacity-0'); modalContainer.classList.remove('scale-95'); }, 10);
+            setTimeout(() => { 
+                modal.classList.remove('opacity-0'); 
+                modalContainer.classList.remove('scale-95'); 
+            }, 10);
         }
+
         function closeModal() {
             modal.classList.add('opacity-0');
             modalContainer.classList.add('scale-95');
